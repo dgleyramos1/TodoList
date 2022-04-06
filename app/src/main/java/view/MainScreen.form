@@ -317,6 +317,9 @@
               <Image iconType="3" name="/add.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabelTasksAddMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -435,9 +438,10 @@
                     <Column editable="false" title="Nome" type="java.lang.String"/>
                     <Column editable="false" title="Descri&#xe7;&#xe3;o" type="java.lang.String"/>
                     <Column editable="false" title="Prazo" type="java.lang.String"/>
-                    <Column editable="true" title="Tarefa conlu&#xed;da" type="java.lang.Boolean"/>
+                    <Column editable="true" title="Tarefa conclu&#xed;da" type="java.lang.Boolean"/>
                   </Table>
                 </Property>
+                <Property name="autoResizeMode" type="int" value="1"/>
                 <Property name="gridColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
