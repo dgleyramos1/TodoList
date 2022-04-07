@@ -154,7 +154,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabelName">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nome"/>
+            <Property name="text" type="java.lang.String" value="Nome*"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldName">
@@ -181,7 +181,7 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabelDeadline">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Prazo"/>
+            <Property name="text" type="java.lang.String" value="Prazo*"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelNotes">
@@ -207,7 +207,11 @@
         <Component class="javax.swing.JFormattedTextField" name="jFormattedTextFieldDeadline">
           <Properties>
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-              <Format format="dd/MM/yyyyy" subtype="-1" type="1"/>
+              <Format format="" subtype="-1" type="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="dd/mm/yyyy"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Ubuntu" size="14" style="0"/>
             </Property>
           </Properties>
         </Component>
