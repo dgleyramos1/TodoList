@@ -52,15 +52,20 @@ public class TaskTableModel extends AbstractTableModel {
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        return switch (columnIndex) {
-            case 0 -> tasks.get(rowIndex).getName();
-            case 1 -> tasks.get(rowIndex).getDescription();
-            case 2 -> dateFormat.format(tasks.get(rowIndex).getDeadline());
-            case 3 -> tasks.get(rowIndex).isIsCompleted();
-            case 4 -> "";
-            case 5 -> "";
-            default -> "Dados não encontrados";
-        };
+        switch (columnIndex) {
+            case 0:
+                return tasks.get(rowIndex).getName();
+            case 1:
+                return tasks.get(rowIndex).getDescription();
+            case 2:
+                return dateFormat.format(tasks.get(rowIndex).getDeadline());
+            case 3:
+                return tasks.get(rowIndex).isIsCompleted();
+            case 4: return "";
+            case 5: return "";
+            default:
+                return "Dado não encontrado";
+        }
     }
     
     @Override

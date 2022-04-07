@@ -224,7 +224,7 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelProjectsList.setBackground(new java.awt.Color(255, 255, 255));
         jPanelProjectsList.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jListProjects.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jListProjects.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
         jListProjects.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jListProjects.setFixedCellHeight(50);
         jListProjects.setSelectionBackground(new java.awt.Color(0, 153, 102));
@@ -249,7 +249,7 @@ public class MainScreen extends javax.swing.JFrame {
             jPanelProjectsListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelProjectsListLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPaneProjects, javax.swing.GroupLayout.DEFAULT_SIZE, 314, Short.MAX_VALUE)
+                .addComponent(jScrollPaneProjects, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -488,8 +488,9 @@ public class MainScreen extends javax.swing.JFrame {
         
         
         if(!projectsModel.isEmpty()){
-            jListProjects.setSelectedIndex(1);
-            Project project = (Project) projectsModel.get(1);
+            jListProjects.setSelectedIndex(0);
+            int projectIndex = jListProjects.getSelectedIndex();
+            Project project = (Project) projectsModel.get(projectIndex);
             loadTasks(project.getId());
         }
         
