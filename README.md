@@ -64,7 +64,7 @@ O projeto visa desenvolver uma aplicação de para o gerenciamento de listas de 
 
 ## Preview
 
-![](/home/dgley/Área de Trabalho/startbycapgemin/TodoList/ToDoList/todolist.png)
+![](todolist.png)
 
 
 
