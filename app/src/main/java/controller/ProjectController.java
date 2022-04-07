@@ -51,7 +51,7 @@ public class ProjectController {
             statement.execute();
             
         } catch(Exception ex){
-            throw new RuntimeException("Erro ao inserir o projeto" + ex.getMessage(), ex);
+            throw new RuntimeException("Erro ao inserir o projeto " + ex.getMessage(), ex);
         } finally {
             //fechando conexões(banco de dados e com statement)
             ConnectionFactory.closeConnection(connection, statement);
@@ -89,7 +89,7 @@ public class ProjectController {
             statement.execute();
             
         } catch (Exception ex){
-            throw new RuntimeException("Erro ao atualizar projeto" + ex.getMessage(), ex);
+            throw new RuntimeException("Erro ao atualizar projeto " + ex.getMessage(), ex);
         } finally {
             //fechando conexões(banco de dados e com statement)
             ConnectionFactory.closeConnection(connection, statement);
@@ -118,7 +118,7 @@ public class ProjectController {
             statement.execute();
             
         } catch (Exception ex){
-            throw new RuntimeException("Erro ao deletar o projeto" + ex.getMessage(), ex);
+            throw new RuntimeException("Erro ao deletar o projeto " + ex.getMessage(), ex);
         } finally {
             //fechando conexões(banco de dados e com statement)
             ConnectionFactory.closeConnection(connection, statement);
@@ -152,7 +152,7 @@ public class ProjectController {
                 project.setId(resultSet.getInt("id"));
                 project.setName(resultSet.getString("name"));
                 project.setDescription(resultSet.getString("description"));
-                project.setCreatedAt(resultSet.getDate("cretedAt"));
+                project.setCreatedAt(resultSet.getDate("createdAt"));
                 project.setUpdatedAt(resultSet.getDate("updatedAt"));
                 
                 //adicionando o projeto dentro da lista de projetos
@@ -162,7 +162,7 @@ public class ProjectController {
             }
             
         } catch (Exception ex){
-            throw new RuntimeException("Erro ao buscar projetos" + ex.getMessage(), ex);
+            throw new RuntimeException("Erro ao buscar projetos " + ex.getMessage(), ex);
         } finally {
             //fechando conexões(banco de dados, statement e resultSet)
             ConnectionFactory.closeConnection(connection, statement, resultSet);
